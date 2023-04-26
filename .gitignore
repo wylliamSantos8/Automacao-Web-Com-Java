@@ -1,0 +1,15 @@
+/target/
+./src/.Initializer.java
+./src/.CucumberExecuteTest.java
+*.js
+*.css
+*.html
+*.json
+./src/.Resultado.xml
+./src/.Resultado.json
+*.png
+*.jpg
+*.jpeg
+/target/
+src/test/resources/relatorios/cucumber-report/
+src/test/resources/relatorios/

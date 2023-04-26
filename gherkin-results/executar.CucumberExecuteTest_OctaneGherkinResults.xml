@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<features version="1"><feature name="Desafio Sicredi" path="src\test\resources\features\GroceryCrud.feature" started="1668090337089" tag=""><file><![CDATA[Feature: Desafio Sicredi
+
+Background:
+	Given que acesso o site "https://www.grocerycrud.com/v1.x/demo/bootstrap_theme"
+
+@ProvaSicredi @CadastrarCustomer @Desafio1
+  Scenario: Desafio 1 - Adicionar Customer no Grid
+    When mudar o valor da combo Select version para "Bootstrap V4 Theme"
+    And clicar no botão "Add Customer"
+    And preencher os campos do formulário 
+    And clicar no botão "Save"
+		Then validar a mensagem "Your data has been successfully stored into the database. Edit Customer or Go back to list"
+		
+@ProvaSicredi @DeletarCustomer @Desafio2
+  Scenario: Desafio 2 - Deletar Customer no Grid
+    When mudar o valor da combo Select version para "Bootstrap V4 Theme"
+    And clicar no botão "Add Customer"
+    And preencher os campos do formulário 
+    And clicar no botão "Save"
+		Then validar a mensagem "Your data has been successfully stored into the database. Edit Customer or Go back to list"
+		And clicar no link "Go back to list"
+		And clicar na coluna Search Name e digitar o conteúdo do Name "Teste Sicredi" 
+		And clicar no checkbox abaixo da palavra Actions
+		And clicar no botão "Delete"
+    And validar o texto "Are you sure that you want to delete this 1 item?"
+    And clicar no botão Delete da popup
+		Then Adicione uma asserção na mensagem "Your data has been successfully deleted from the database."
+		
+		
+		]]></file><scenarios><background><steps><step duration="14677531700" name="Given que acesso o site &quot;https://www.grocerycrud.com/v1.x/demo/bootstrap_theme&quot;" status="passed"/></steps></background><scenario name="Desafio 2 - Deletar Customer no Grid"><steps><step duration="3770404200" name="When mudar o valor da combo Select version para &quot;Bootstrap V4 Theme&quot;" status="passed"/><step duration="5629655000" name="And clicar no botão &quot;Add Customer&quot;" status="passed"/><step duration="4045402000" name="And preencher os campos do formulário" status="passed"/><step duration="3148743600" name="And clicar no botão &quot;Save&quot;" status="passed"/><step duration="3065384100" name="Then validar a mensagem &quot;Your data has been successfully stored into the database. Edit Customer or Go back to list&quot;" status="passed"/><step duration="3145975500" name="And clicar no link &quot;Go back to list&quot;" status="passed"/><step duration="10328955300" name="And clicar na coluna Search Name e digitar o conteúdo do Name &quot;Teste Sicredi&quot;" status="passed"/><step duration="2179647400" name="And clicar no checkbox abaixo da palavra Actions" status="passed"/><step duration="3173416200" name="And clicar no botão &quot;Delete&quot;" status="passed"/><step duration="5068916900" name="And validar o texto &quot;Are you sure that you want to delete this 1 item?&quot;" status="passed"/><step duration="3165775900" name="And clicar no botão Delete da popup" status="passed"/><step duration="3057112000" name="Then Adicione uma asserção na mensagem &quot;Your data has been successfully deleted from the database.&quot;" status="passed"/></steps></scenario></scenarios></feature></features>
